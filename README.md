@@ -10,11 +10,11 @@ When the following content appears in Markdown document and try to browse and bu
 
 and the following issues occur.
 
-## Never be able to navigate
+### Issue 1: Never be able to navigate
 
 After executed `pnpm docs:dev` or (`nr docs:dev`) command, the development server is running without any complaints and the bugged page is rendered correctly when navigate to, the server hangs and would be stuck once and only when you try to navigate back to the other pages.
 
-## Build forever
+### Issue 2: Build forever
 
 After executed `pnpm docs:dev` or (`nr docs:dev`) command, the building rotating indicator before `building client + server bundles...` would stop to rotate after a few seconds, and this will eventually result in never ending build process that stuck forever. The shell looks like this:
 
@@ -30,7 +30,7 @@ nr docs:build
 ⠙ building client + server bundles...
 ```
 
-## Defunct processes
+### Issue 3: Defunct processes
 
 If you try to interrupt the stuck build process with Ctrl-C, the execution will be 'interrupted' while the true build process is still running in the background and eating 100% CPU.
 
